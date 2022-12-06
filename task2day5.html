@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2 day5</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var apiUser = new XMLHttpRequest(); // object can make req to server
+    const handelr = () => {
+        if (apiUser.readyState == 4 && apiUser.status == 200) {
+            var todos = JSON.parse(apiUser.responseText).todos
+
+            localStorage.setItem("userData", JSON.stringify(todos))
+            for (var i = 0; i < todos.length; i++) {
+                console.log(todos[i].id)
+                var ol = document.createElement("ol");
+
+                ol.innerHTML = `<li>${todos[i].todo}</li><li >${todos[i].completed}</li><li>${todos[i].userId}</li>`
+                document.body.appendChild(ol)
+            }
+        }
+    }
+    // https://dummyjson.com/todos
+
+    apiUser.open("GET", "https://dummyjson.com/todos");
+
+    apiUser.send();
+
+    apiUser.onreadystatechange = handelr
+
+
+
+</script>
+
+</html>

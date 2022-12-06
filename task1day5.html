@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day5task1</title>
+</head>
+
+<body>
+    <input type="text" name="username" placeholder="enter your username">
+    <input type="password" name="password" placeholder="enter your password">
+    <input type="submit" value="set" name="set" id="set">
+    <input type="submit" value="reload" name="reload" id="reload" onClick="window.location.reload();">
+    <input type="submit" value="remove" name="remove" id="remove">
+</body>
+<script>
+    const username = document.querySelector('input[name=username]');
+    const password = document.querySelector('input[name=password]');
+    document.querySelector('#set').addEventListener('click', () => {
+
+        var allDataArray = [password.value, username.value];
+        var itims = JSON.stringify(allDataArray);
+        localStorage.setItem("allDataArray", itims)
+    })
+    document.querySelector('#remove').addEventListener('click', () => { localStorage.removeItem("allDataArray") })
+    document.querySelector('#remove').addEventListener('click', () => {
+        document.cookie = "username=John Doe ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
+    })
+    document.querySelector('#set').addEventListener('click', () => document.cookie = "username=John Doe")
+
+
+    //  function WriteCookie() {
+
+    //         //    cookievalue = escape(prop) + ";";
+    //         //    console.log(cookievalue)
+
+    //         //    document.write ("username=John Doe");
+    //         }
+
+    // var ret=JSON.parse(itims);
+    // console.log(ret)
+
+    // localStorage.setItem("ashraf");
+
+
+    localStorage.removeItem("allDataArray")
+    function handelr() {
+        if (apiUser.readyState == 4 && apiUser.status == 200) {
+            var users = JSON.parse(apiUser.responseText).users
+
+            localStorage.setItem("userData", JSON.stringify(users))
+            for (var i = 0; i < users.length; i++) {
+                var div = document.createElement("div");
+                div.innerHTML = `<span>${users[i].firstName}</span>
+       <span >${users[i].gender}</span>
+       <span>${users[i].age}</span>`
+                document.body.appendChild(div)
+            }
+        }
+    }
+
+
+</script>
+
+</html>
