@@ -1,0 +1,50 @@
+const arial = () => document.querySelector('#PAR').style.fontFamily = 'Arial';
+
+
+const courier = () => document.getElementById('PAR').style.fontFamily = '"Courier New", Courier, mono';
+const georgia = () => document.getElementById('PAR').style.fontFamily = 'Georgia,Charcoal,sans-serif';
+const impact = () => document.getElementById('PAR').style.fontFamily = 'Impact,sans-serif';
+const timesnewroman = () => document.getElementById('PAR').style.fontFamily = 'Verdana, Tahoma, Serif';
+const verdana = () => document.getElementById('PAR').style.fontFamily = '"Brush Script MT", cursive';
+const left = () => document.getElementById('PAR').style.textAlign = 'left';
+const center = () => document.getElementById('PAR').style.textAlign = 'center';
+const right = () => document.getElementById('PAR').style.textAlign = 'right';
+const justify = () => document.getElementById('PAR').style.textAlign = 'justify';
+const linenone = () => document.getElementById('PAR').style.lineHeight = 'normal';
+const line1 = () => document.getElementById('PAR').style.lineHeight = "10px";
+const line2 = () => document.getElementById('PAR').style.lineHeight = "15px";
+const line3 = () => document.getElementById('PAR').style.lineHeight = "1.5";
+const letternone = () => document.getElementById('PAR').style.letterSpacing = "normal";
+const letter1 = () => document.getElementById('PAR').style.letterSpacing = "-1px";
+const letter2 = () => document.getElementById('PAR').style.letterSpacing = "2px";
+const letter3 = () => document.getElementById('PAR').style.letterSpacing = "3px";
+const text1 = () => document.getElementById('PAR').style.textIndent = "0px";
+const text2 = () => document.getElementById('PAR').style.textIndent = "5px";
+const text3 = () => document.getElementById('PAR').style.textIndent = "15px";
+const text4 = () => document.getElementById('PAR').style.textIndent = "25px";
+const textnone = () => document.getElementById('PAR').style.textTransform = "normal";
+const capitalize = () => document.getElementById('PAR').style.textTransform = "capitalize";
+const uppercase = () => document.getElementById('PAR').style.textTransform = "uppercase";
+const lowercase = () => document.getElementById('PAR').style.textTransform = "lowercase";
+const text = () => document.getElementById('PAR').style.textDecoration = "none";
+const line = () => document.getElementById('PAR').style.textDecoration = "line-through";
+const overline = () => document.getElementById('PAR').style.textDecoration = "overline";
+const underline = () => document.getElementById('PAR').style.textDecoration = "underline";
+const none = () => document.getElementById('PAR').style.border = "none";
+const dotted = () => document.getElementById('PAR').style.border = "dotted thick";
+const double = () => document.getElementById('PAR').style.border = "double thick";
+const groove = () => document.getElementById('PAR').style.border = "groove thick";
+const insert = () => document.getElementById('PAR').style.border = "insert thick";
+const solid = () => document.getElementById('PAR').style.border = "solid thick";
+const outset = () => document.getElementById('PAR').style.border = "outset thick";
+const ridge = () => document.getElementById('PAR').style.border = "ridge thick";
+const dashed = () => document.getElementById('PAR').style.border = "dashed thick";
+
+const black = () => document.getElementById('PAR').style.borderColor = "black";
+const pink = () => document.getElementById('PAR').style.borderColor = "pink";
+const red = () => document.getElementById('PAR').style.borderColor = "red";
+const ChangeBorderColor = (e) => document.getElementById('PAR').style.border = e;
+const blue = () => document.getElementById('PAR').style.borderColor = "blue";
+const yellow = () => document.getElementById('PAR').style.borderColor = "yellow";
+const purple = () => document.getElementById('PAR').style.borderColor = "purple";
+
